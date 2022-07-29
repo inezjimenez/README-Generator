@@ -1,11 +1,12 @@
 // TODO: Include packages needed for this application
 
-const fs = required('fs');
-const inquirer = required('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown');
+const fs = require('fs');
+const inquirer = require('inquirer');
+const generateMarkdown = require('./generateMarkdown');
 
 // TODO: Create an array of questions for user input
-const questions = [
+// inquirer.prompt
+const question = [
     {
         type: 'input',
         name: 'title',
@@ -18,6 +19,7 @@ const questions = [
                 return false;
             }
         }
+        
     },
 
     {
@@ -120,4 +122,4 @@ function init() {
 init();
 
 //export
-module.exports = questions;
+module.exports = question;
